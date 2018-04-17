@@ -211,7 +211,8 @@ public class DodajKursGUI extends JFrame {
 			k.setSrednji(Double.parseDouble(srednji.getText()));
 			k.setProdajni(Double.parseDouble(prodajni.getText()));
 			k.setSifra(Integer.parseInt(sifra.getText()));
-			MenjacnicaGUI.getTextArea().append(k.toString());
+			MenjacnicaGUI.getTextArea().append("\n");
+			MenjacnicaGUI.getTextArea().append("Dodat " + k.toString());
 			dispose();
 			
 
