@@ -71,7 +71,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JScrollPane scrollPane;
 	private JTable table;
 	private JScrollPane scrollPane_1;
-	private JTextArea textArea;
+	private static JTextArea textArea;
 	private JPopupMenu popupMenu;
 	private JMenuItem mntmDodajKurs;
 	private JMenuItem mntmObriiKurs;
@@ -159,6 +159,12 @@ public class MenjacnicaGUI extends JFrame {
 	private JButton getButton_1() {
 		if (btnNewButton == null) {
 			btnNewButton = new JButton("Dodaj kurs");
+			btnNewButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+				DodajKursGUI dd = new DodajKursGUI();
+				dd.setVisible(true);
+				}
+			});
 		}
 		return btnNewButton;
 	}
@@ -308,7 +314,7 @@ public class MenjacnicaGUI extends JFrame {
 		return scrollPane_1;
 	}
 
-	private JTextArea getTextArea() {
+	public static JTextArea getTextArea() {
 		if (textArea == null) {
 			textArea = new JTextArea();
 		}
@@ -348,6 +354,12 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmDodajKurs() {
 		if (mntmDodajKurs == null) {
 			mntmDodajKurs = new JMenuItem("Dodaj kurs");
+			mntmDodajKurs.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					DodajKursGUI dd = new DodajKursGUI();
+					dd.setVisible(true);	
+				}
+			});
 		}
 		return mntmDodajKurs;
 	}
